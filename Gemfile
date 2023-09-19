@@ -48,6 +48,19 @@ group :development, :test do
   gem "factory_bot_rails"
   gem 'faker'
 
+  # Authentication and Authorization
+  gem 'devise'
+  gem 'devise-jwt'
+
+  # Serializer ruby objects => json
+  gem 'jsonapi-serializer'
+
+  # Allow CORS to be used
+  gem 'rack-cors'
+
+  # Load dotenv
+  gem 'dotenv-rails'
+
 end
 
 group :development do
