@@ -1,3 +1,5 @@
+require 'faker'
+
 # Seeding users to the database
 User.destroy_all
 
@@ -9,3 +11,15 @@ User.destroy_all
 end
 
 p "Created #{User.count} users"
+
+# Seeding books to the database
+Book.destroy_all
+
+10.times do
+  Book.create(
+    title: Faker::Lorem.sentence,
+    description: Faker::Lorem.paragraph,
+    author: Faker::Name.name)
+end
+
+p "Created #{Book.count} books"

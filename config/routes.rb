@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   # Custom routes for user handling
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
